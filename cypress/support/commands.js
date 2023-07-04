@@ -23,3 +23,18 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+
+//Login Fonksiyonu:
+Cypress.Commands.add('login', (email, password) =>{
+    cy.visit('https://digiturksite.kartega.com/')
+    cy.get(':nth-child(8) > .btn').click()
+    cy.get('#UserName').type(email)
+    cy.get('#Password').type(password)
+    cy.get('.login-right-button').click()
+
+
+//Search Fonksiyonu:    
+
+
+}) 
