@@ -24,3 +24,6 @@ import 'cypress-iframe';
 
 //or require('cypress-iframe');
 import '@4tw/cypress-drag-drop'
+
+//file upload
+import 'cypress-file-upload';

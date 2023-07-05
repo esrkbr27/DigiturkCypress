@@ -25,16 +25,25 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
 
-//Login Fonksiyonu:
+//Digiturk Login Fonksiyonu:
 Cypress.Commands.add('login', (email, password) =>{
     cy.visit('https://digiturksite.kartega.com/')
     cy.get(':nth-child(8) > .btn').click()
     cy.get('#UserName').type(email)
     cy.get('#Password').type(password)
     cy.get('.login-right-button').click()
-
-
-//Search Fonksiyonu:    
-
-
 }) 
+
+
+//Digiturk Search Fonksiyonu: 
+Cypress.Commands.add('search', (word) =>{
+
+    cy.visit('https://digiturksite.kartega.com/')
+    cy.get('.nav-links-desktop-searchIcon').click()
+    cy.get('#searchbarMain').type(word)
+    cy.wait(3000)
+    cy.get('.searchbox-menu-content-result').should('be.visible')
+
+
+})   
+
