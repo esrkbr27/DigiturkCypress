@@ -5,6 +5,7 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
-    baseUrl : "https://digiturksite.kartega.com"
+    baseUrl : "https://digiturksite.kartega.com" ,
+    projectId: "vr8kx3"
   },
 });

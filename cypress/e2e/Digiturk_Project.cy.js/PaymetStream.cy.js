@@ -2,7 +2,7 @@
 
 describe('Paketler', ()=>{
 
-    it.only('TV Paketleri', ()=>{
+    it.only('TV Paketleri Sporun Yildizi', ()=>{
         Cypress.on('uncaught:exception', (err, runnable) => {
             // returning false here prevents Cypress from
             // failing the test
@@ -46,7 +46,5 @@ describe('Paketler', ()=>{
 
     })
 
-    it('', ()=>{
-
-    })
+    
 } )
