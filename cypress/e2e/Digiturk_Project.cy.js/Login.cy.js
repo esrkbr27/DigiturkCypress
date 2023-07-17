@@ -2,7 +2,7 @@
 
 describe('Custom Command1', ()=>{
 
-    it('Positive Login', ()=>{
+    it.only('Positive Login', ()=>{
         Cypress.on('uncaught:exception', (err, runnable) => {
             // returning false here prevents Cypress from
             // failing the test
@@ -26,6 +26,8 @@ describe('Custom Command1', ()=>{
           //Hoşgeldin System admin yazısının görünür olduğunu doğrula
           cy.get(':nth-child(8) > .dropdownHeader > .dropdownHeader-button').should('be.visible')
 
+          cy.screenshot()
+
     })
 
     it('Login Fonksiyon Cagirma', ()=>{
@@ -41,7 +43,7 @@ describe('Custom Command1', ()=>{
 
     })
 
-    it.only('Negative Login', ()=>{
+    it('Negative Login', ()=>{
         cy.login('admin@com','admin124')
         cy.get('.alert').should('be.visible')
 
