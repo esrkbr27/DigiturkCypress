@@ -1,0 +1,53 @@
+          Unlocking Test Automation Superpowers
+
+
+- Introduction
+    - Cypress is a powerful end-to-end testing framework
+    - One of its key features is its extensive set of commands
+    - In this presentation, we will explore some essential Cypress commands
+    - You can find information about cypreess at cypress.io website
+    
+
+
+- cy.visit()
+    - Command used to visit a specific URL
+    - Example: cy.visit('https://www.example.com')
+
+
+- cy.get()
+    - Command used to select elements on the page
+    - Example: cy.get('.btn-primary')
+
+
+- cy.click()
+    - Command used to simulate a click on a specific element
+    - Example: cy.get('.btn-primary').click()
+
+
+- cy.type()
+    - Command used to simulate keyboard input in form fields
+    - Example: cy.get('#email-input').type('example@email.com')
+
+
+- cy.contains()
+    - Command used to assert the presence of specific text on the page
+    - Example: cy.contains('Welcome to our website')
+
+
+- cy.wait()
+    - Command used to pause test execution for a specific duration
+    - Example: cy.wait(1000) // Pauses for 1 second
+
+
+- cy.should()
+    - Command used to make assertions about elements and their properties
+    - Example: cy.get('.message').should('be.visible')
+
+
+- cy.intercept()
+    - Command used to intercept HTTP requests and responses
+    - Example: cy.intercept('GET', '/api/users').as('getUsers')
+
+
+
+

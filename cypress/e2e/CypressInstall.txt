@@ -1,0 +1,76 @@
+                           CYPRESS KURULUM
+*Cypress nedir?
+
+-Cypress; web sitelerinde otomasyon testi yapmak için kullanılan Javascript tabanlı bir test aracıdır.
+-Kurulum ve çalıştırma açısından selenyuma göre daha kolay ve hızlı bir etkileşim sağlar.
+Selenyumdaki gibi sanal bir driver tanımlamaya gerek kalmadan Javascript kodları ile doğrudan 
+tarayıcıda çalışan kullanıcı dostu bir araçtır.
+-Cypress te Mocha ve Chai kütüphaneleri otomatik olarak yüklü olarak gelir.Ve assertion gibi 
+komutları kullanmak için ayrıca bir dependency yüklemeye gerek kalmaz.
+-Cypresste debugging oldukça gelişmiştir.Hata olan satır çözümü ile birlikte gösterilir.Rahatlıkla
+hatanın sebebi anlaşılabilir.(debuggability)
+-Cypress te testler çalışırken anlık görüntüler alınır.Hangi aşamada hangi görüntü olduğu 
+komut satırı üzerine gelinerek görülebilir.(time travel)
+-Cypresste komutlarda bir değişiklik yapıldığında test otomatik olarak yyeniden 
+yüklenir ve çalışmaya başlar.(real time loads)
+-Cypress te elementlerin yüklenmesi için otomatik olarak bekleme yapar.(Automatic waiting)
+-Cypress te eklenti yüklemeden ekran görüntüsü ve video almak mümkündür.
+
+
+
+
+
+*Cypress kullanmak için aşagıdaki programların yüklü olması gerekir;
+
+1)Node.js 
+2)Visual Studio Code
+3)Cypress 12.0 
+
+*Masaüstünde Cypress projemizi içine koyacağımız boş bir folder açılır.
+Vscode a sürükle bırak yaparak proje Vscode da açılmış olur.Sağ tarafta proje açılmış olur.
+*Vscode da en üstte Terminale tıklanarak New Terminal deyip yeni bir terminal açılır.
+Açılan terminalde aşağıdaki komutlar ile cypressi vscode a indireceğiz.
+*Komut olarak npm kullanılıyor npm: node package manager/module açılmış hali.
+npm de Javascript tabanlı bir tooldur. npmjs.com sayfası var.Bu komut ile bu sayfadaki
+istediğimiz programı çağırabiliyoruz.npm google play vazifesi görüyor. 
+
+-npm init  : Boş dosyayı proje olarak ilişkilendirmek için bu komut kullanılır.Projeyi tanımlamak
+             için bazı sorular sorulur,cevapları verilir.Cevap vermeden entera basarak da ilerleyip
+             daha sonra bunları kendimiz oluşturabiliriz.
+             package name: cypress project
+             version:1.0
+             git repository:
+             author:
+-npm init -y :Proje oluştururken sorulan soruları atlayarak direk projeyi oluşturmayı sağlar.
+              Bu komutla birlkte package.json dosyası otomatik olarak oluşur.
+-npm install cypress  &
+-npm install cypress --save-dev cypressi yüklemek için her iki komutta kullanılabilir.istediğimiz versionu yüklemek için;
+-npm install cypress@12.7.2 şeklinde yükleme yapılabilir.Bu yükleme yapıldıktan sonra node modules dosyaları(kütüphaneler) yüklenmiş olacak.
+
+-npx cypreess open: cypress runnerını açar alt tarafta
+      
+                      CYPRESS RUNNER
+
+*Açılan cy simgeli runnerda E2E Testing ve Beta Testing seçeneklerinden
+E2E testing seçilir.
+*İlk sefer açılışa mahsus olarak Configuration Files sayfasında Continue denilerek
+devam edilir.Burdaki ayarlar (cypress.config,support,fixtures) runnera ve vscode a otomatik olarak gelecektir.
+*Choose a browser sayfasında testleri çalıştırmak istediğimiz browserı seçmiş oluruz.
+*Create your spec sayfasında "Scaffold example specs" seçeneği seçilir.
+Bu şekilde spec dosyaları yüklenmiş olur.Vscodeda da e2e dosyası altında örnek classlar ideye gelmiş olur.
+*Bu şekliyle kodlar vscode da yazılırken cypress runnerdan da testler çalışmış olur.
+
+                      TERMİNAL EKRANINDAN TESTLERİ ÇALIŞTIRMA
+
+*npx cypress run : komutu tüm testlerinizi headless olarak(browserı açmadan) çalıştırır.
+
+*npx cypreess run  --spec "path" : sadece verilen path altındaki testi çalıştırır.
+
+*npx cypreess run --browser firefox --spec "path"
+
+                                
+               
+            
+
+
+                          
