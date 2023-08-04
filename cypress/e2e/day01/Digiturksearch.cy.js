@@ -6,11 +6,7 @@ context('My second test', ()=>{
 
 beforeEach('Her testten önce calisir',()=>{
 //testng deki before metodu görevini görür.
-Cypress.on('uncaught:exception', (err, runnable) => {
-    // returning false here prevents Cypress from
-    // failing the test
-    return false
-  })
+
 cy.visit('/')
 
 })
@@ -33,8 +29,7 @@ cy.visit('/')
         cy.get('#searchbarMain.nosubmit',{timeout :5000}).type('Aile{enter}')
         //get(): ile locate alıyoruz
         //type(): ile metin gönderiyoruz
-       
-        
+         
     })
 
     it('Search test', ()=>{

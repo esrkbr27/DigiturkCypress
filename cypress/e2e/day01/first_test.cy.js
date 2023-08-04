@@ -3,6 +3,7 @@
 describe('My first test', ()=>{
     // describe: tanımlamak demektir.Test burada tanımlanır, ismi verilir.
     //describe ve it mocha kütüphanesinden gelir.
+    //describe yerine context() de kullanabiliriz.
 
   
     it('URL Test', ()=>{

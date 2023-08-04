@@ -1,4 +1,4 @@
-class HomePage {
+ class HomePage {
 
     getSigninButton(){
         return cy.contains('Giriş Yap').click()

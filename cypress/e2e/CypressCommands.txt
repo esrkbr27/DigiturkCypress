@@ -48,6 +48,68 @@
     - Command used to intercept HTTP requests and responses
     - Example: cy.intercept('GET', '/api/users').as('getUsers')
 
+-cy.fixtures()
+    -Fixture dosyasında yer alan json formatındaki datayı 
+    alıp testlerimizde kullanmamızı sağlar.   
+
+-cy.go()  
+   -Sayfada ileri gitmek için go('forward') veya go(1) komutunu,
+   -Sayfada geri gitmek için go('back') veya go(-1) komutunu kullanabiliriz.  
+
+-cy.reload()
+   -Sayfanın yenilenmesini sağlar.   
+
+-cy.viewport()   
+   -viewport; görüş alanı demektir.Testlerimizi hangi responsive ölçüsünde
+   çalıştırmak istiyorsak o ölçüleri komutun içerisine yazdığımız zaman testlerimiz
+   o ölçülerde çalışacaktır.
+   
+                      CUSTOM COMMANDS
+
+-Kullanıcı tarafından oluşturulan özel komutlardır.
+-Testlerde sıklıkla tekrar eden kodları otomatize etmek için kullanılır.
+-supportun altındaki commands.js dosyasına Cypress.Commands.add diyerek eklenir.aşagıdaki örnekte olduğu gibi;
+fonksiyonun içine diğer classlardan çağırmak için kullanacağımız metot ismini yazarız,
+
+support altındaki command.js dosyası
+//Digiturk Login Fonksiyonu:
+Cypress.Commands.add('login', (email, password) =>{
+    cy.visit('https://digiturksite.kartega.com/')
+    cy.get(':nth-child(8) > .btn').click()
+    cy.get('#UserName').type(email)
+    cy.get('#Password').type(password)
+    cy.get('.login-right-button').click()
+})
+
+daha sonra classtan göndereceğimiz datalar için login fonksiyonuna parametreler ekleriz.
+Testleri yazdığımız classtan 2 farklı yolla dataları gönderebiliriz:
+
+1)login diyerek çağırır, parametre olarak da 
+hangi değeri göndermek istiyorsak o değerleri parantez içerisine yazarız.
+
+çağırdığımız class;
+ cy.login('admin@com','admin124')
+
+2)fixtures classından faydalanarak dataları göndermek istiyorsak;
+fixtures dosyası altına .json uzantılı bir dosya oluşturup, json formatında 
+dataları aşağıdaki gibi tanımlarız.
+{
+"url":"https://digiturksite.kartega.com/",
+"email":"admin@admin.com",
+"password":"admin1234"
+}
+
+çağırdığımız class;
+
+
+
+ 
+
+
+
+
+
+
 
 
 

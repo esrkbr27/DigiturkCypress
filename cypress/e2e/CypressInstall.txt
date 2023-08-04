@@ -16,9 +16,10 @@ yüklenir ve çalışmaya başlar.(real time loads)
 -Cypress te elementlerin yüklenmesi için otomatik olarak bekleme yapar.(Automatic waiting)
 -Cypress te eklenti yüklemeden ekran görüntüsü ve video almak mümkündür.
 
-
-
-
+NOT:https://www.youtube.com/playlist?list=PLcokO8K_aejblw6s7eECCsQH9GoDqzE9x
+adresinde Mikdat Öztürk 'ün cypress videolarına ulaşılabilir.
+*video 14 den önceki videolar cypress eski version ile anlatılmıştır.
+video 14 de cypress 10.0 üzerindeki versiyonlar için yapılan güncellemeler anlatılmaktadır.
 
 *Cypress kullanmak için aşagıdaki programların yüklü olması gerekir;
 

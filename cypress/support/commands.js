@@ -47,3 +47,15 @@ Cypress.Commands.add('search', (word) =>{
 
 })   
 
+//SaurceDemo Login Fonksiyonu
+Cypress.Commands.add('saurce_login', (username, password) =>{
+
+    cy.visit('https://www.saucedemo.com/v1/')
+    cy.get('#user-name').should('be.visible').type(username)
+    cy.wait(2000)
+    cy.get('#password').should('be.visible').type(password)
+    cy.wait(2000)
+    cy.get('#login-button').click()
+
+})
+

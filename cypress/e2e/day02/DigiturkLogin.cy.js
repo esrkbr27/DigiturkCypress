@@ -23,7 +23,5 @@ describe('Digiturk Login', ()=>{
       cy.get('.login-right-button').click()
     })
 
-    it('', ()=>{
-       
-    })
+   
 } )
