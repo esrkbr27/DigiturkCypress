@@ -3,11 +3,7 @@
 describe('Check Boxes', ()=>{
 
     it.skip('Single Check Box', ()=>{
-        Cypress.on('uncaught:exception', (err, runnable) => {
-            // returning false here prevents Cypress from
-            // failing the test
-            return false
-          })
+    
           cy.visit('https://digiturksite.kartega.com/')
           //Paketleri tıkla
           cy.get('.has-submenu > [href="/package"]').click()
@@ -41,11 +37,6 @@ describe('Check Boxes', ()=>{
 
     it.only('All CheckBoxes 1', ()=>{
 
-        Cypress.on('uncaught:exception', (err, runnable) => {
-            // returning false here prevents Cypress from
-            // failing the test
-            return false
-          })
           cy.visit('https://digiturksite.kartega.com/')
           //Paketleri tıkla
           cy.get('.has-submenu > [href="/package"]').click()
@@ -72,11 +63,7 @@ describe('Check Boxes', ()=>{
     })
 
     it('All Checkboxes 2', ()=>{
-        Cypress.on('uncaught:exception', (err, runnable) => {
-            // returning false here prevents Cypress from
-            // failing the test
-            return false
-          })
+      
           cy.visit('https://digiturksite.kartega.com/')
           //Paketleri tıkla
           cy.get('.has-submenu > [href="/package"]').click()

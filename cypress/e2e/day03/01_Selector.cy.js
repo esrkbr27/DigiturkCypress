@@ -11,7 +11,7 @@ describe('Selectors Examples', ()=>{
      //By id
      cy.get('#twotabsearchtextbox')
      //By class
-     cy.get('.nav-search-field ')
+     cy.get('.nav-search-field')
 
      //By Attribute name and value
      cy.get("[type='text']")

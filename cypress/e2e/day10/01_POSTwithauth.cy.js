@@ -1,6 +1,8 @@
 /// <reference types="cypress" />
 
 /*
+
+****https://pokeapi.co/ api testleri için fake apiler kullanmamızı sağlar.
 Post işlemi yaparken bodyde  ne göndereceğimizi,auth ile ne gönderceğimizi girilen siteden aldık.
 firstname olan kısma istediğimiz dataları girdik.Testi çalıştırdıktan sonra
 sitenin üzerinde sağ cliclk yAPIP incele deyince devtoolda Console yazan kısmı

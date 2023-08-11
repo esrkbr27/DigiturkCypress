@@ -48,6 +48,9 @@
     - Command used to intercept HTTP requests and responses
     - Example: cy.intercept('GET', '/api/users').as('getUsers')
 
+-cy.request()
+   -API testleri yaparken request göndermek ve doğrulamalarını yapmak için kullanılır.     
+
 -cy.fixtures()
     -Fixture dosyasında yer alan json formatındaki datayı 
     alıp testlerimizde kullanmamızı sağlar.   
@@ -63,6 +66,29 @@
    -viewport; görüş alanı demektir.Testlerimizi hangi responsive ölçüsünde
    çalıştırmak istiyorsak o ölçüleri komutun içerisine yazdığımız zaman testlerimiz
    o ölçülerde çalışacaktır.
+
+-cy.writeFile()
+   -Frameworkde bir txt dosyası oluşturup içine bir şeyler yazmak istiyorsak;
+   öncelikle nereye dosyayı koymak istiyorsak oranın pathini yazarız,
+   daha sonra da dosya içerisine yazmak istediğimiz metni yazarız.
+
+
+-cy.readFile()  
+   -Frameworkde bulunan bir dosyayı okumak istiyorsak;
+   öncelikle okuyacağı dosyanın yolunu veriyoruz, daha sonra should ile
+   veya export ile doğrulamalarını yapıyoruz.
+
+-cy.scrollIntoView()
+   -Verilen elmente kadar scroll yapar.scrollTo() metodu ile de verilen koordinata
+   kadar scroll  yapmış olur.
+
+-cy.check()
+   -Tıklamak istediğimiz check boxı işaretler.   
+
+-cy.uncheck()
+   -Tiklediğimiz checkboxı kaldırır.   
+
+      
    
                       CUSTOM COMMANDS
 
@@ -98,8 +124,22 @@ dataları aşağıdaki gibi tanımlarız.
 "email":"admin@admin.com",
 "password":"admin1234"
 }
+-------------------------------------------------------------------------------------------
 
-çağırdığımız class;
+***NOT: Cypress spec ekranında testler çalışırken komutların altında xhr ları kaladırmak istiyorsak;
+cypress/support/e2e.js classının içine aşağıdaki kod bloğunu eklersek;
+xhr ların çıkmadığını göreceksiniz.
+
+const app = window.top;
+if (!app.document.head.querySelector('[data-hide-command-log-request]')) {
+  const style = app.document.createElement('style');
+  style.innerHTML =
+    '.command-name-request, .command-name-xhr { display: none }';
+  style.setAttribute('data-hide-command-log-request', '');
+
+  app.document.head.appendChild(style);
+}
+
 
 
 

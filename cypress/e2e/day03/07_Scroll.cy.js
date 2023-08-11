@@ -3,15 +3,11 @@
 describe('Scroll ', ()=>{
 
     it('Scroll İnto View', ()=>{
-        Cypress.on('uncaught:exception', (err, runnable) => {
-            // returning false here prevents Cypress from
-            // failing the test
-            return false
-          })
+    
           cy.visit('https://digiturksite.kartega.com/')
           cy.wait(3000)
-          cy.get('.activeAccordion-desktop > .accordionDg-wrapper-wholeAccordion-accordion-circleIcon').scrollIntoView()
-          cy.get('.channelIntroduction-content-button > input').scrollIntoView({duration:8000})
+       //   cy.get('.activeAccordion-desktop > .accordionDg-wrapper-wholeAccordion-accordion-circleIcon').scrollIntoView()
+        //  cy.get('.channelIntroduction-content-button > input').scrollIntoView({duration:8000})
 
           //8 saniye içerisinde verilen elemente scroll yap
 
@@ -25,7 +21,5 @@ describe('Scroll ', ()=>{
           cy.get(':nth-child(1) > [href="/contactForm"]').scrollIntoView().click()
     })
 
-    it('', ()=>{
-
-    })
+    
 } )

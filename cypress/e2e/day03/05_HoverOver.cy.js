@@ -21,7 +21,7 @@ describe('Hover Over', ()=>{
 
     })
 
-    it.only('Digiturk Hover over', ()=>{
+    it.skip('Digiturk Hover over', ()=>{
         Cypress.on('uncaught:exception', (err, runnable) => {
             // returning false here prevents Cypress from
             // failing the test

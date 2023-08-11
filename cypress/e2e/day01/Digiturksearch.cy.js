@@ -19,7 +19,6 @@ cy.visit('/')
     it.skip('Title test', ()=>{
         cy.title().should('include','Digiturk')
         cy.title().should('equal','| Digiturk')
-
         //skip testi yapmadan geçer.
 
     })

@@ -19,8 +19,9 @@ describe('Digiturk Login', ()=>{
       cy.get('#UserName', {timeout: 4000}).type('admin@admin.com')
       cy.get('#Password', {timeout: 4000 }).type('admin1234')
       // 2.yol:cy.get('#Password', {timeout: 4000 }).type
-      ('admin1234 {enter}')
+      //('admin1234 {enter}')
       cy.get('.login-right-button').click()
+   
     })
 
    

@@ -23,8 +23,8 @@ video 14 de cypress 10.0 üzerindeki versiyonlar için yapılan güncellemeler a
 
 *Cypress kullanmak için aşagıdaki programların yüklü olması gerekir;
 
-1)Node.js 
-2)Visual Studio Code
+1)Node.js  (https://nodejs.org/en/download/) 
+2)Visual Studio Code (https://code.visualstudio.com/)
 3)Cypress 12.0 
 
 *Masaüstünde Cypress projemizi içine koyacağımız boş bir folder açılır.
@@ -34,6 +34,7 @@ Açılan terminalde aşağıdaki komutlar ile cypressi vscode a indireceğiz.
 *Komut olarak npm kullanılıyor npm: node package manager/module açılmış hali.
 npm de Javascript tabanlı bir tooldur. npmjs.com sayfası var.Bu komut ile bu sayfadaki
 istediğimiz programı çağırabiliyoruz.npm google play vazifesi görüyor. 
+*Vscode da kodları yazdıktan sonra save yapıp öyle çalıştırmak gerekecektir.
 
 -npm init  : Boş dosyayı proje olarak ilişkilendirmek için bu komut kullanılır.Projeyi tanımlamak
              için bazı sorular sorulur,cevapları verilir.Cevap vermeden entera basarak da ilerleyip

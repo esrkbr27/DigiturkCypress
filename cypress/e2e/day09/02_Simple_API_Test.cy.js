@@ -15,6 +15,8 @@ görebiliriz.
 
 NOT:İstediğimiz keye ulaşmak için en yukarıdan aşağı doğru key üzerinden ilerlemek gerekir.
 
+***https://pokeapi.co/ fake apiler ile test yapmamıza olanak sağlar.
+
 */
 
 describe('Simple API Test', ()=>{
