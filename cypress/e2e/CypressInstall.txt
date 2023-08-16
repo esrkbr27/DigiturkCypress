@@ -34,7 +34,8 @@ Açılan terminalde aşağıdaki komutlar ile cypressi vscode a indireceğiz.
 *Komut olarak npm kullanılıyor npm: node package manager/module açılmış hali.
 npm de Javascript tabanlı bir tooldur. npmjs.com sayfası var.Bu komut ile bu sayfadaki
 istediğimiz programı çağırabiliyoruz.npm google play vazifesi görüyor. 
-*Vscode da kodları yazdıktan sonra save yapıp öyle çalıştırmak gerekecektir.
+*Vscode da kodları yazdıktan sonra save yapıp öyle çalıştırmak gerekecektir.Bunun için File/Auto save
+tıklanarak dosyada her değişiklik yaptığımızda otomatik kaydetmiş oluruz.
 
 -npm init  : Boş dosyayı proje olarak ilişkilendirmek için bu komut kullanılır.Projeyi tanımlamak
              için bazı sorular sorulur,cevapları verilir.Cevap vermeden entera basarak da ilerleyip

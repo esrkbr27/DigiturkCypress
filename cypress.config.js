@@ -6,6 +6,8 @@ module.exports = defineConfig({
       // implement node event listeners here
     },
     baseUrl : "https://digiturksite.kartega.com" ,
+    viewportHeight:1000,
+    viewportWidth:1440,
     projectId: "vr8kx3",
     "video": false
 
@@ -16,6 +18,7 @@ module.exports = defineConfig({
   chromeWebSecurity:false
   //Chromeda testleri çalıştırırken güvenlik kaynaklı bir problemle
   //karşılaşmamak için bu degeri false olarak tanımladık.
+
 });
 
 /*cypress.config dosyasıda baseUrl olarak bir site tanımladığımızda burdan / koyarak çağırırsak 

@@ -7,7 +7,8 @@ describe('Alerts', ()=>{
         cy.wait(3000)
         cy.get(':nth-child(1) > button').click()
 
-        //Cypress otomatik olarak çıkan alertteki  Tamam butonuna tıklar.
+        //Cypress otomatik olarak çıkan alertteki  Tamam butonuna tıklar.ve
+        //cypresste testler çalışırken çıkan alert görünmez 
 
         //Tıkladıktan sonra çıkan sonuç yazısının doğrulamasını yaptık.
         cy.get('#result').should('have.text','You successfully clicked an alert')
