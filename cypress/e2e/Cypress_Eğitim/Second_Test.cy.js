@@ -10,6 +10,9 @@ it('Search Practice', () => {
 
     //Url doğrulanır.
     cy.url().should('include', 'automationexercise')
+
+    //Products tıklanır
+    cy.get('.shop-menu > .nav > :nth-child(2) > a').click()
     
     
 });

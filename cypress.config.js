@@ -6,7 +6,7 @@ module.exports = defineConfig({
       // implement node event listeners here
     },
     baseUrl : "https://digiturksite.kartega.com" ,
-    viewportHeight:1000,
+    viewportHeight:900,
     viewportWidth:1440,
     projectId: "vr8kx3",
     "video": false

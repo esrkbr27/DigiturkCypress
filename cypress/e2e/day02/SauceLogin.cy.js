@@ -13,7 +13,7 @@ it("Login Custom Command", () =>{
     cy.fixture('saurce').as("user")
     cy.get('@user').then((user) =>{
     cy.saurce_login(user.username, user.password)
-
+     
     })
 })
 

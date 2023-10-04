@@ -59,3 +59,26 @@ Cypress.Commands.add('saurce_login', (username, password) =>{
 
 })
 
+//AutomationExercise signup metot
+
+Cypress.Commands.add('automationexercisesignup', (name, emailaddress) =>{
+
+    cy.visit('https://www.automationexercise.com/login')
+    cy.get('[data-qa="signup-name"]').type(name)
+    cy.get('[data-qa="signup-email"]').type(emailaddress)
+    cy.get('[data-qa="signup-button"]').click()
+    cy.get(':nth-child(1) > b').should('be.visible')
+ 
+
+})
+
+Cypress.Commands.add('beksignup',(username1,password1)=>{
+   
+    cy.visit('https://beksitealpha.kartega.com/anasayfa')
+    cy.get('#username').type(username1)
+    cy.get('#password').type(password1)
+    cy.get('.ant-form-item-control-input-content > .ant-btn > span').click()
+})
+
+
+

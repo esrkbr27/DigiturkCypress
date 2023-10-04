@@ -13,8 +13,11 @@ describe('Google search', ()=>{
 
     it.only('Click', ()=>{
       cy.visit('https://www.google.com')
-      cy.get(':nth-child(1) > .gb_v').click()
+      cy.get('#APjFqb').type('cypress{enter}')
 
       //it.only sadece bu testi çalıştır anlamına gelir
     })
+
+
+    
 } )

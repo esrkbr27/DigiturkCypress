@@ -5,11 +5,7 @@
 describe('Digiturk Login', ()=>{
 
     it('Login Test', ()=>{
-        Cypress.on('uncaught:exception', (err, runnable) => {
-            // returning false here prevents Cypress from
-            // failing the test
-            return false
-          })
+      
         cy.visit('/')
         //1.yol:DOM da text olarak Giriş Yap olan elementi arar 
       //  cy.contains('Giriş Yap').click()

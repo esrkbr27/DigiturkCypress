@@ -31,6 +31,7 @@ describe('Login Test', ()=>{
         cy.get('[data-qa="signup-name"]').type(name)
         cy.get('[data-qa="signup-email"]').type(email)
         cy.get('[data-qa="signup-button"]').click()
+    
 
     })
 } )

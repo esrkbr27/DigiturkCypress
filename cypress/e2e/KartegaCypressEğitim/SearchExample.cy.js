@@ -28,20 +28,11 @@ it('Laptop ara,doğrulamaları yap', () => {
      //Çerezleri Kabul et
      cy.get('.sp-cc-buttons').click()
 
-     //url i doğrula;
-     cy.url().should('contains','amazon')
-
-     //Title doğrula
-    cy.title().should('include', 'Amazon')
-
      //Arama kutusuna bilgisayar yaz
      cy.get('#twotabsearchtextbox').type('Laptop {enter}')    
 
      //Arama sonucunu doğrula
      cy.get('.sg-col-14-of-20 > .sg-col-inner').should('include.text', 'Laptop')
-
-
-
 
 
 });

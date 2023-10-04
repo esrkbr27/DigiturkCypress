@@ -22,15 +22,14 @@ describe('Hover Over', ()=>{
     })
 
     it.skip('Digiturk Hover over', ()=>{
-        Cypress.on('uncaught:exception', (err, runnable) => {
-            // returning false here prevents Cypress from
-            // failing the test
-            return false
-          })
-
+        
         cy.visit('https://digiturksite.kartega.com/')
         cy.wait(3000)
         cy.get('.has-submenu > [href="/package"]').trigger('mouseover',{timeout:100000})
+
+          })
+
+      
        
         
         

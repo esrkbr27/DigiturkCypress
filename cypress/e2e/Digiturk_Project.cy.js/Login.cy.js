@@ -3,32 +3,33 @@
 describe('Custom Command1', ()=>{
 
     it.only('Positive Login', ()=>{
-        Cypress.on('uncaught:exception', (err, runnable) => {
-            // returning false here prevents Cypress from
-            // failing the test
-            return false
+
+
+        cy.visit('https://digiturksite.kartega.com/')
+
+        //Giriş Yap butonuna tıkla
+        cy.get(':nth-child(8) > .btn').click()
+
+        //username veri gir
+        cy.get('#UserName').type('admin@admin.com')
+        cy.wait(3000)
+
+        //passworde veri gir
+        cy.get('#Password').type('admin1234')
+
+        //Giriş Yap butonuna tıkla
+        cy.get('.login-right-button').click()
+
+        //Hoşgeldin System admin yazısının görünür olduğunu doğrula
+        cy.get(':nth-child(8) > .dropdownHeader > .dropdownHeader-button').should('be.visible')
+
+        cy.screenshot()
+
+      
           })
-          cy.visit('https://digiturksite.kartega.com/')
+          
 
-          //Giriş Yap butonuna tıkla
-          cy.get(':nth-child(8) > .btn').click()
-
-          //username veri gir
-          cy.get('#UserName').type('admin@admin.com')
-          cy.wait(3000)
-
-          //passworde veri gir
-          cy.get('#Password').type('admin1234')
-
-          //Giriş Yap butonuna tıkla
-          cy.get('.login-right-button').click()
-
-          //Hoşgeldin System admin yazısının görünür olduğunu doğrula
-          cy.get(':nth-child(8) > .dropdownHeader > .dropdownHeader-button').should('be.visible')
-
-          cy.screenshot()
-
-    })
+  
 
     it('Login Fonksiyon Cagirma', ()=>{
         /*
@@ -49,4 +50,7 @@ describe('Custom Command1', ()=>{
 
 
     })
-} )
+
+
+})
+

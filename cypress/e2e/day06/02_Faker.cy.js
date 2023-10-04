@@ -9,7 +9,7 @@ describe('Using Faker', ()=>{
         /*Faker kullanmak için https://www.npmjs.com/package/@fakerjs/faker adresine gidilir.
         npm i @fakerjs/faker komutu terminale yazılır.
         classın içerisinden faker import edilir.Bir classa 
-        import faker from '@fakerjs/faker';
+        import {faker}  from '@fakerjs/faker';
 
         */
        cy.visit('https://www.automationexercise.com/login')
@@ -42,7 +42,7 @@ describe('Using Faker', ()=>{
       cy.get('[data-qa="days"]').select('27')
 
       //Month April seç
-      cy.get('[data-qa="months"]').select('April')
+      cy.get('[data-qa="months"]').select('April').should('have.value','4')
 
       //Yılı 1989 seç
       cy.get('[data-qa="years"]').select('1989')
@@ -83,6 +83,8 @@ describe('Using Faker', ()=>{
      //Account created yazisinin geldiği doğrulanır.
      cy.get('b').should('be.visible')
         
+
+
 
     })
 

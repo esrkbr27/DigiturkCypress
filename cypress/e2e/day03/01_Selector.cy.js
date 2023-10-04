@@ -29,7 +29,7 @@ describe('Selectors Examples', ()=>{
         //xpath ile locate almak için support file daki e2e.js classına require('@cypress/xpath') 
         //komutu eklenir. 
         //xpath i algılamazsa /// <reference types="cypress-xpath" /> komutu en başa eklenir.
-
+       
 
 
     })

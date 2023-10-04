@@ -25,6 +25,9 @@ import 'cypress-iframe';
 //or require('cypress-iframe');
 import '@4tw/cypress-drag-drop'
 
+//faker
+import '@faker-js/faker'
+
 //file upload
 import 'cypress-file-upload';
 
