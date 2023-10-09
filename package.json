@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "cy:run_day02": "npx cypress run --spec 'cypress/e2e/day02/' --browser chrome",
-    "mycode": "npx cypress run --spec 'cypress/e2e/day02/' --browser chrome --headed"
+    "mycode": "npx cypress run --spec 'cypress/e2e/day02/DigiturkLogin.cy.js' --browser chrome --headed --config pageLoadTimeout=100000"
   },
   "keywords": [],
   "author": "",
