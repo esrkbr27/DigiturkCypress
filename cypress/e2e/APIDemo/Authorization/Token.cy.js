@@ -1,5 +1,14 @@
 /// <reference types='cypress'/>
 
+/*
+Bazı apileri çağırmak için authorization kısmına token girmek gerekebilir.
+Bunun için önce before metodu içerisine token alacağımız apiyi "POST"  yaptık
+ve dönen response daki teken i "authToken" isminde bir değişkene atadık.
+Daha sonra bu tokenı headers içeirisindeki " 'Authorization':'Bearer '+authToken " alanına tanımladık
+ve böylece tüm orderları çağırabildik
+
+
+*/
 describe('Token', () => {
 
     let authToken=null;
@@ -17,6 +26,7 @@ describe('Token', () => {
              
             clientName:'ABC',
             clientEmail:Math.random().toString(5).substring(2)+'@gmail.com'
+            //emailde her defasında uniqe bir mail istediği için Math classındaki random() dan faydalandık.
         }
        }).then((response)=>{
 

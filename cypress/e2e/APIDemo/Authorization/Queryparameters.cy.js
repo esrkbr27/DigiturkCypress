@@ -1,5 +1,10 @@
 /// <reference types='cypress'/>
 
+/*
+'https://reqres.in/api/users?page:2' apisi "GET" ile çağırmak istediğimizde
+parametreyi "qs" ile request body içerisine tanımladık.
+
+*/
 describe('OueryParamater', () => { 
 
     const queryparam={page:2};
