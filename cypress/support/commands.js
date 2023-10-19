@@ -82,3 +82,33 @@ Cypress.Commands.add('beksignup',(username1,password1)=>{
 
 
 
+  
+
+//API de token döndüren metod;    
+Cypress.Commands.add('Gettoken',(username,password)=>{
+ 
+    
+   cy.request({
+
+      method:'POST',
+      url:'http://bekservicealpha.kartega.com/api/uye/Login',
+      body:{
+        "data": {
+            "Username": username,
+            "Password": password
+        }
+      },
+      headers:{
+        'Content-Types':'application/json'
+      }
+   }).then((response)=>{
+    
+     const  authtoken=response.body.token;
+ 
+     return authtoken;
+   })
+
+})
+
+
+

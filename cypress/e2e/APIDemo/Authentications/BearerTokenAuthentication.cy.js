@@ -7,7 +7,7 @@ describe('Authentication', () => {
 
     const token='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'
 
-    it('Berare Token Authenticate', () => {
+    it('Bearer Token Authenticate', () => {
 
         cy.request({
             method:'GET',
