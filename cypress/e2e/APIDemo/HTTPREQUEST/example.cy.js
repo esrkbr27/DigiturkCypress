@@ -10,7 +10,6 @@ describe('API GET REQUEST', () => {
     .its('status') //response un status kodunu aldık
     .should('equal',200)  //200 olup olmadığını doğruladık
     .then((response)=>{
-     
      console.log(response)
 
     })
