@@ -19,7 +19,7 @@ pipeline {
     stage('Run Tests') {
       steps {
         // Cypress testlerini çalıştır
-        sh 'npx cypress run --browser chrome --spec cypress\e2e\day01\Digiturksearch.cy.js'
+        sh 'npx cypress run --browser chrome --spec cypress/e2e/day01/Digiturksearch.cy.js'
       }
     }
     
