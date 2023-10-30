@@ -5,7 +5,7 @@ pipeline {
     stage('Checkout') {
       steps {
         // Proje deposunu çek
-        git  https://github.com/esrkbr27/DigiturkCypress.git
+        git  'https://github.com/esrkbr27/DigiturkCypress.git'
       }
     }
     
