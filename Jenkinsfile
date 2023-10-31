@@ -19,15 +19,10 @@ pipeline {
     stage('Run Tests') {
       steps {
         // Cypress testlerini çalıştır
-        sh 'npx cypress run --browser chrome --spec cypress/e2e/day01/Digiturksearch.cy.js'
+        sh 'npx cypress run --browser chrome --spec cypress\e2e\day01\googlesearch.cy.js'
       }
     }
     
-    stage('Publish Reports') {
-      steps {
-        // Test raporlarını yayınla
-        sh 'npx cypress run --record --key <CYPRESS_RECORD_KEY>'
-      }
     }
   }
 }

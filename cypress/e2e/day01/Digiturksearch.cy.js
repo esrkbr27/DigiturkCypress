@@ -31,8 +31,5 @@ cy.visit('/')
          
     })
 
-    it('Search test', ()=>{
-       
-      
-    })
+   
 } )
