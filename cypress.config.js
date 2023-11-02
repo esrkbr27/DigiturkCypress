@@ -10,7 +10,6 @@ module.exports = defineConfig({
     viewportWidth:1440,
     projectId: "vr8kx3",
     "video": false
-
     //video: false yazınca uzak bilgisayarda testler çalışırken videolarını kaydetmez.
     //default olarak video: true olarak çalışır.
   
